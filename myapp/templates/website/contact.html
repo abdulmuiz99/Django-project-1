@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel='stylesheet' href="{% static 'contact.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>Contact Us</h1>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Get in Touch</h1>
+            <p>If you have any questions, comments, or would like to work with us, please fill out the form below or reach out to us using the contact details provided. We look forward to hearing from you!</p>
+            
+            <div class="contact-form">
+                <form action="submit_form.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            
+            <div class="contact-details">
+                <h2>Contact Details</h2>
+                <p>Email: contact@yourwebsite.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Your Street, Your City, Your Country</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
